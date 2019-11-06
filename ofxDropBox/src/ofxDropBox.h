@@ -3,10 +3,10 @@
 #import <UIKit/UIKit.h>
 #import "ofMain.h"
 #import "ofxiPhoneExtras.h"
-//#include "ofxiPhoneAlerts.h"
+
 #include "ofxiPhone.h"
 
-//#import <DropboxSDK/DropboxSDK.h>
+
 #import <ObjectiveDropboxOfficial/ObjectiveDropboxOfficial.h>
 
 extern     bool UPLOAD_INPROCESS;
