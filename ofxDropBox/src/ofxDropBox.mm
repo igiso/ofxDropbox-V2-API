@@ -72,25 +72,10 @@ ofxDropBox::~ofxDropBox() {
 }
 
 void ofxDropBox::startSession(string appKey_, string appSecret_, bool useDBRootAppFolder) {
-//Authorization: Bearer <"7Hu67kzeJq0AAAAAAAAylC4eXRyt14X0VHsLNGEVt1ZonQHluMbZnKlM7-7npOd3">
-/*
-    DBSession* dbSession = [[DBSession alloc]
-                             initWithAppKey:ofxStringToNSString(appKey)
-                             appSecret:ofxStringToNSString(appSecret)
-                            root:(useDBRootAppFolder) ? kDBRootAppFolder : kDBRootDropbox]; // either kDBRootAppFolder or kDBRootDropbox
-                            //autorelease];
-    dbSession.delegate = dropBoxDelegate;
-    [DBRequest setNetworkRequestDelegate:dropBoxDelegate];
-    [DBSession setSharedSession:dbSession];
-    
-    // check if already authenticated- should only need auth once
-    if ([[DBSession sharedSession] isLinked]) {
-        notifyAuthorised();
-    }
-    */
+
     cout<<"startSession.. |||||"<<endl;
  
-    NSString *appKey = @"kipbikyp6zwxt24";
+    NSString *appKey = @"____put your key here_______";
     NSString *registeredUrlToHandle = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"][0][@"CFBundleURLSchemes"][0];
     
     
