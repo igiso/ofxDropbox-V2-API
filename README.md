@@ -1,9 +1,9 @@
 # ofxDropbox-V2-API
 This is an Addon for IOS and MAC based on the now deprecated https://github.com/trentbrooks/ofxDropBox
 
-BY Trent Brooks (all credit to him)
+originally BY Trent Brooks (all credit to him)
 
-this is basically the same thing updated to work with V2 api
+This is a revised version
 
 You need to download , COMPILE and link the 
 
