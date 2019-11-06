@@ -2,7 +2,7 @@
 
 
 #include "ofxDropBox.h"
-//#import <DropboxSDK/DropboxSDK.h>
+
 #import <ObjectiveDropboxOfficial/ObjectiveDropboxOfficial.h>
 
 vector<string> ofxDropBoxMetadata;
@@ -304,28 +304,8 @@ void ofxDropBox::downloadFile(string filePath,string pargetPath) {
         
     }
     
-/*
-    if(DOWNLOAD_IN_PROCCESS==""){
-    if(pargetPath.size()==0)pargetPath="/";else{
-        cout<<"SHIT:"<<pargetPath<<endl;
-        ofDirectory fs(ofxiOSGetDocumentsDirectory()+pargetPath);
-        if(!fs.exists())fs.createDirectory(ofxiOSGetDocumentsDirectory()+pargetPath,true,true);
 
-        pargetPath = ""+pargetPath+"/";
-    }
-    downloadsComplete = false; 
-    NSLog(@"do download ");
     
-    NSString *nFilePath = ofxStringToNSString(filePath);
-    [[dropBoxDelegate downloadQueue] addObject:nFilePath];
-    dropBoxDelegate.isDownloading = YES;
-        dropBoxDelegate.hasMetaDataUpdated = YES;
-        cout<<"@@@"<<pargetPath<<endl;
-        
-        [[dropBoxDelegate restClient] loadMetadata:ofxStringToNSString(pargetPath)];
-        DOWNLOAD_IN_PROCCESS = filePath;
-    }
- */
 }
 
 // when a full queue is uploaded from delegate send notification
@@ -383,17 +363,8 @@ trylistiagainlikeanidiot:
         
         
     }
-    
-/*
-    NSString *nFilePath = ofxStringToNSString(filePath);
-    if(loadedPath!=filePath){
-        dropBoxDelegate.hasMetaDataUpdated = NO;
-        loadedPath=filePath;
 
-        dropBoxDelegate.hasMetaDataUpdated = YES;
-        [[dropBoxDelegate restClient] loadMetadata:nFilePath];
-    }
- */
+    
     return ofxDropBoxMetadata;
     
 }
@@ -427,35 +398,13 @@ void ofxDropBox::launchedWithURL(string url_)
             NSLog(@"Error: %@", authResult);
         }
     }else cout<<" IT IS NIIIIIIIL!!!!!"<<endl;
-    /*
+   
     
-    DBOAuthResult *authResult = [DBClientsManager handleRedirectURL:url];
-    if (authResult != nil) {
-        if ([authResult isSuccess]) {
-            NSLog(@"Success! User is logged into Dropbox.");
-            UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-            ViewController *viewController = (ViewController *)navigationController.childViewControllers[0];
-            viewController.authSuccessful = YES;
-            return YES;
-        } else if ([authResult isCancel]) {
-            NSLog(@"Authorization flow was manually canceled by user!");
-        } else if ([authResult isError]) {
-            NSLog(@"Error: %@", authResult);
-        }
-    }
-*/
     
     cout<<" LAUCN WIHT URLF IS CALLED "<<endl;
     
-    /*
-    NSURL* nsUrl = [ [ NSURL alloc ] initWithString: ofxStringToNSString(url) ];
-    if ([[DBSession sharedSession] handleOpenURL:nsUrl]) {
-        if ([[DBSession sharedSession] isLinked]) {
-            NSLog(@"App linked successfully! At this point you can start making API calls");
-            notifyAuthorised();
-        }
-    }
-     */
+  
+    
 }
 
 // activity indicator stuff
